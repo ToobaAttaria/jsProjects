@@ -1,0 +1,477 @@
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.ludoContainer{
+    background: url('./images/background.avif');
+}
+.diceContainer
+{
+    align-content: center;
+    width: 500px;
+    height: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.BorderBox
+{
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.RedContainer,.GreenContainer,.BlueContainer,.YellowContainer
+{
+    width: 200px;
+    height: 200px;
+    align-content: center;
+  
+}
+.RedContainer
+{
+    background-color:var(--RedClr);
+}
+.GreenContainer
+{
+    background-color:var(--GreenClr);
+}
+.BlueContainer
+{
+    background-color: var(--BlueClr);
+}
+.YellowContainer
+{
+    background-color: var(--YellowClr);
+}
+.GreenStepsContainer,.BlueStepsContainer
+{
+     width: 100px;
+     height: 200px;
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);  
+     grid-template-rows: repeat(6, 1fr);     
+     grid-auto-flow: column; 
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    background-color: rgb(255, 255, 255);
+
+}
+
+.RedStepsContainer,.YellowStepsContainer
+{
+    height: 100px;
+    width: 200px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);  
+    position: relative;
+    background-color: rgb(255, 255, 255);
+}
+.BlueStepsContainer
+{
+    transform: scaleY(-1);
+}
+.GreenStepsContainer
+{
+    transform: scaleX(-1);
+} 
+.YellowStepsContainer
+{
+    transform: rotate(180deg);
+}
+.steps
+{
+    border: 1px solid black;
+    width: 33.34px;
+    aspect-ratio: 1/1;
+    box-sizing: border-box;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.CenterdCircle
+{
+    width: 100px;
+    aspect-ratio: 1/1;
+    border-top: 50px solid var(--GreenClr);
+    border-right: 50px solid var(--YellowClr);
+    border-left:50px solid var(--RedClr);
+    border-bottom: 50px solid var(--BlueClr);
+    box-sizing: border-box;
+}
+.centered
+{
+    position: relative;
+}
+.centered .token
+{
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    background-color: transparent;
+
+}
+
+.GreenStepsContainer .safe,.GreenStepsContainer .start,.GreenStepsContainer .stop{
+    background-color: var(--GreenClr);
+}
+.RedStepsContainer .safe,.RedStepsContainer .start,.RedStepsContainer .stop{
+    background-color: var(--RedClr);
+}
+.YellowStepsContainer .safe,.YellowStepsContainer .start,.YellowStepsContainer .stop{
+    background-color:var(--YellowClr);
+}
+.BlueStepsContainer .safe,.BlueStepsContainer .start,.BlueStepsContainer .stop{
+    background-color:var(--BlueClr);
+  
+}
+.InnerBox
+{
+    width: 120px;
+    aspect-ratio: 1/1;
+    background-color: rgba(255, 255, 255); 
+    margin: 0 auto;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+.token
+{
+    width: 30px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    padding: 2.5px;
+    padding-bottom: 3px;
+    cursor: pointer;
+    
+}
+:root {
+    --yellow-token: rgb(179, 179, 16);
+    --blue-token: rgb(27, 27, 101);
+    --green-token: rgb(10, 111, 10);
+    --red-token: rgb(168, 32, 32);
+}
+
+.YellowColor {
+    background-color: var(--yellow-token);
+}
+
+.blueColor {
+    background-color: var(--blue-token);
+}
+
+.greenColor {
+    background-color: var(--green-token);
+}
+
+.redColor {
+    background-color: var(--red-token);
+}
+
+.redDiceContainer,.greenDiceContainer,.blueDiceContainer,.YellowDiceContainer
+{
+    width:50px;
+    height: 50px;
+    border: 3px solid black;
+    box-sizing: border-box;
+    display: flex;
+    overflow: hidden;
+  
+    
+}
+.steps
+{
+    position: relative;
+   
+}
+
+.TokenContainer
+{
+    width: 40px;
+    aspect-ratio: 1/1;
+    background-color:var(--CLR);  
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     
+}
+.active
+{
+    animation: active 0.7s infinite linear;
+}
+@keyframes active {
+    0%{
+        background-color:rgb(0, 0, 0);  
+    }
+    100%
+    {
+        background-color: #ffffff;
+    }
+}
+
+
+.turn{
+    background: url('/images/images.png');
+    background-size:cover ;
+    transform: rotate(180deg);
+    transform: scaleX(-1);
+   
+}
+.RedStepsContainer .turn,.YellowStepsContainer .turn
+{
+    transform: rotate(270deg);
+}
+
+.stop{
+        background: url('/images/star.jpg');
+        background-size: cover;
+        background-blend-mode:color-dodge;
+}
+.start{
+    background-blend-mode: darken;
+}
+.rolling {
+    animation: rolling 0.4s infinite linear;
+}
+@keyframes rolling{
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    25%
+    {
+        transform: rotate(90deg);
+    }
+    50%
+    {
+        transform: rotate(180deg);
+    }
+    75%
+    {
+        transform: rotate(270deg);
+    }
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+.diceContainer 
+{
+    width: 500px;
+    height: 50px;
+    justify-content: space-between;
+    
+
+    
+}
+.dice{
+    display: flex;
+    cursor: pointer;
+    
+    
+}
+.face{
+    width: 35px;
+    height: 35px;
+    background-color: rgb(255, 255, 255);
+    margin: 5px;
+    position: relative;
+    border-radius: 10%;
+    border: 1px solid rgb(173, 163, 163);
+    box-sizing: border-box;
+    
+}
+.hidden {
+    display: none;
+}
+.dot
+{
+    background-color: black;
+    width: 8px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    position: absolute;
+}
+.face:nth-child(1) .dot:nth-child(1),.face:nth-child(5) .dot:nth-child(5) {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+
+.face:nth-child(2) .dot:nth-child(1),.face:nth-child(6) .dot:nth-child(3) {
+    left: 15%;
+    top: 39%;
+}
+
+.face:nth-child(2) .dot:nth-child(2),.face:nth-child(6) .dot:nth-child(4) {
+    right: 15%;
+    top: 39%;
+}
+.face:nth-child(3) .dot:nth-child(1) {
+    left: 10%;
+    top: 10%;
+}
+.face:nth-child(3) .dot:nth-child(2) {
+    left: 38%;
+    top: 38%;
+}
+.face:nth-child(3) .dot:nth-child(3) {
+    right: 10%;
+    bottom:10%;
+}
+.face:nth-child(4) .dot:nth-child(1),.face:nth-child(5) .dot:nth-child(1) {
+    left: 11%;
+    top: 10%;
+}
+.face:nth-child(4) .dot:nth-child(2),.face:nth-child(5) .dot:nth-child(2) {
+    right: 11%;
+    top: 10%;
+}
+.face:nth-child(4) .dot:nth-child(3),.face:nth-child(5) .dot:nth-child(3) {
+    left: 11%;
+    bottom: 10%;
+}
+.face:nth-child(4) .dot:nth-child(4),.face:nth-child(5) .dot:nth-child(4) {
+    right: 11%;
+    bottom: 10%;
+}
+.face:nth-child(6) .dot:nth-child(1) {
+    left: 15%;
+    top: 5%;
+}
+.face:nth-child(6) .dot:nth-child(2) {
+    right: 15%;
+    top: 5%;
+}
+
+.face:nth-child(6) .dot:nth-child(5) {
+    left: 15%;
+    bottom: 5%;
+}
+
+.face:nth-child(6) .dot:nth-child(6) {
+    right: 15%;
+    bottom: 5%;
+}
+
+.ludoContainer
+{
+     z-index: 1;
+     align-content: center;
+     height: 100vh;
+    
+}
+.nameContainer
+{
+    background-color: rgb(86, 110, 110);
+    width: 350px;
+    margin: 0 auto;
+    border-radius: 10px;
+    padding: 10px;
+    position: absolute;
+    z-index: 3;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+ 
+}
+.nameContainer h1{
+   text-align: center;
+   margin: 10px;
+   margin-bottom: 30px;
+ 
+}
+.nameContainer input
+{
+   height: 20px;
+   padding: 2px 5px;
+    border-radius: 5px;
+    outline: none;
+}
+.SelectToken
+{
+    border-radius: 50%;
+    display: inline-block;
+    font-size: 20px;
+    padding: 2.5px;
+    padding-bottom: 3px;
+    margin: 5px;
+    margin-left: 60px;
+    cursor: pointer;
+}
+.nameContainer button
+{
+    width: 90px;
+    height: 30px;
+    display: block;
+    margin: 20px auto;
+   border-radius: 5px;
+   background-color: green;
+   color: white;
+   font-size: 20px;
+   letter-spacing: 4px;
+   margin-top: 5px;
+   /* margin-left: 240px; */
+   /* cursor: not-allowed; */
+}
+.overlap
+{
+    background-color: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    z-index: 2;
+}
+.nameContainer h2{
+
+    color:rgb(86, 110, 110);
+    text-align: center;
+    font-size: 25px;
+    margin: 10px 0;
+    
+}
+.TokenName
+{
+
+    margin: 10px;
+    margin-top: -30px;
+    text-align: center;
+    color: white;
+    font-size: 17px;
+}
+.steps .token{
+
+    font-size: 15px;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    padding-bottom: 4px;
+    border-radius: 50%;
+   
+    /* border: 1px solid black; */
+   
+}

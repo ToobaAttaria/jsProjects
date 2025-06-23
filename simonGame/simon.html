@@ -1,0 +1,49 @@
+<!DOCTYPE htstatusml>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simon Game</title>
+    <link rel="stylesheet" href="/simon.css">
+</head>
+
+<body>
+    <div class="background">
+
+
+        <div class="container">
+            <div id="greenContainer"></div>
+            <div id="redContainer"></div>
+            <div id="YellowConatiner"></div>
+            <div id="blueContainer"></div>
+
+            <div class="tittleContainer">
+                <h1>SIMON!</h1>
+
+                <button id="strictBtn"></button> <br>
+                <span id="strict"> STRICT</span>
+
+                <button id="StartBtn">Start</button> <br>
+
+                <button id="PowerBtn"></button> <br>
+                <span id="power">POWER</span>
+
+                <div type="text" id="status">0</div>
+                <span id="count">ROUND</span>
+
+
+            </div>
+        </div>
+        <audio id="sound1" src="/images/simonSound1.mp3"></audio>
+        <audio id="sound2" src="/images/simonSound2.mp3"></audio>
+        <audio id="sound3" src="/images/simonSound3.mp3"></audio>
+        <audio id="sound4" src="/images/simonSound4.mp3"></audio>
+        <audio id="sound5" src="/images/wins.mp3"></audio>
+        <audio id="sound6" src="/images/lost.mp3"></audio>
+
+    </div>
+    <script src="/simon.js"></script>
+</body>
+
+</html>

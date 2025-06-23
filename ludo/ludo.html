@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ludo</title>
+    <link rel="stylesheet" href="/ludo.css">
+</head>
+
+<body>
+    <div class="nameContainer ">
+        <h1>Select Tokens </h1>
+        <label class="redColor SelectToken" for="clrRed">🔴</label>
+        <input type="text" id="clrRed" placeholder="Player's Name">
+        <br>
+        <label class="greenColor SelectToken" for="clrGreen">🟢</label>
+        <input type="text"  id="clrGreen" placeholder="Player's Name">
+        <br>
+        <label class="YellowColor SelectToken" for="clrYellow">🟡</label>
+        <input type="text"  id="clrYellow" placeholder="Player's Name">
+        <br>
+        <label class="blueColor SelectToken" for="clrBlue">🔵</label>
+        <input type="text"  id="clrBlue" placeholder="Player's Name">
+        <br>
+        <h2>"Two players required."</h2>
+        <button id="play">Play</button>
+    </div>
+   
+<div class="overlap"></div>
+    <div class="ludoContainer ">
+        <div class="diceContainer ">
+            <div class="redDiceContainer redColor" style="--Clr: rgb(168, 32, 32);">
+                <div class="dice">
+                    <div class="face">
+                        <div class="dot"></div>
+                    </div>
+                    <div class="face">
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                    </div>
+                    <div class="face">
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                    </div>
+                    <div class="face">
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                    </div>
+                    <div class="face">
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                    </div>
+                    <div class="face">
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="greenDiceContainer greenColor"></div>
+
+            <div class="BorderBox"
+                style="--RedClr: rgb(211, 12, 12); --YellowClr: rgb(222, 222, 11); --BlueClr: rgb(14, 14, 167);--GreenClr:rgb(4, 134, 4);">
+                <div class="RedContainer red" style="--CLR: rgb(216, 15, 15,0.5);">
+                  <div class="TokenName">Tooba</div>
+                    <div class="InnerBox">
+                        <div class="TokenContainer"><div class="red redColor token">🔴</div></div>
+                        <div class="TokenContainer"><div class="red redColor token">🔴</div></div>
+                        <div class="TokenContainer"><div class="red redColor token">🔴</div></div>
+                        <div class="TokenContainer"><div class="red redColor token">🔴</div></div>
+                    </div>
+                </div>
+                <div class="GreenStepsContainer" style="--Clr:rgb(4, 134, 4);">
+                    <div data-id="8" class="steps"></div>
+                    <div data-id="9" class="steps start"></div>
+                    <div data-id="10" class="steps "></div>
+                    <div data-id="11" class="steps"></div>
+                    <div data-id="12" class="steps"></div>
+                    <div data-id="13" class="steps"></div>
+                    <div data-id="7" class="steps turn"></div>
+                    <div data-id="14" class="steps safe"></div>
+                    <div data-id="15" class="steps safe"></div>
+                    <div data-id="16" class="steps safe"></div>
+                    <div data-id="17" class="steps safe"></div>
+                    <div data-id="18" class="steps safe"></div>
+                    <div data-id="6" class="steps"></div>
+                    <div data-id="5" class="steps"></div>
+                    <div data-id="4" class="steps stop"></div>
+                    <div data-id="3" class="steps"></div>
+                    <div data-id="2" class="steps"></div>
+                    <div data-id="1" class="steps"></div>
+                </div>
+                <div class="GreenContainer green" style="--CLR:rgb(4, 134, 4,0.5);">
+                    <div class="TokenName">Tooba</div>
+                    <div class="InnerBox">
+                        <div class="TokenContainer"><div class="green greenColor token">🟢</div></div>
+                        <div class="TokenContainer"><div class="green greenColor token">🟢</div></div>
+                        <div class="TokenContainer"><div class="green greenColor token">🟢</div></div>
+                        <div class="TokenContainer"><div class="green greenColor token">🟢</div></div>
+                    </div>
+                </div>
+                <div class="RedStepsContainer" style="--Clr: rgb(216, 15, 15);">
+                    <div data-id="8" class="steps"></div>
+                    <div data-id="9" class="steps start"></div>
+                    <div data-id="10" class="steps "></div>
+                    <div data-id="11" class="steps"></div>
+                    <div data-id="12" class="steps"></div>
+                    <div data-id="13" class="steps"></div>
+                    <div data-id="7" class="steps turn"></div>
+                    <div data-id="14" class="steps safe"></div>
+                    <div data-id="15" class="steps safe"></div>
+                    <div data-id="16" class="steps safe"></div>
+                    <div data-id="17" class="steps safe"></div>
+                    <div data-id="18" class="steps safe"></div>
+                    <div data-id="6" class="steps"></div>
+                    <div data-id="5" class="steps"></div>
+                    <div data-id="4" class="steps stop"></div>
+                    <div data-id="3" class="steps"></div>
+                    <div data-id="2" class="steps"></div>
+                    <div data-id="1" class="steps"></div>
+                </div>
+                <div class="centered ">
+                    <div class="CenterdCircle"></div>
+                </div>
+
+                <div class="YellowStepsContainer" style="--Clr: rgb(222, 222, 11);">
+                    <div data-id="8" class="steps"></div>
+                    <div data-id="9" class="steps start"></div>
+                    <div data-id="10" class="steps "></div>
+                    <div data-id="11" class="steps"></div>
+                    <div data-id="12" class="steps"></div>
+                    <div data-id="13" class="steps"></div>
+                    <div data-id="7" class="steps turn"></div>
+                    <div data-id="14" class="steps safe"></div>
+                    <div data-id="15" class="steps safe"></div>
+                    <div data-id="16" class="steps safe"></div>
+                    <div data-id="17" class="steps safe"></div>
+                    <div data-id="18" class="steps safe"></div>
+                    <div data-id="6" class="steps"></div>
+                    <div data-id="5" class="steps"></div>
+                    <div data-id="4" class="steps stop"></div>
+                    <div data-id="3" class="steps"></div>
+                    <div data-id="2" class="steps"></div>
+                    <div data-id="1" class="steps"></div>
+                </div>
+                <div class="BlueContainer  blue" style="--CLR: rgb(14, 14, 167,0.5);">
+                    <div class="TokenName">Tooba</div>
+                    
+                    <div class="InnerBox">
+                        <div class="TokenContainer"><div class="blue blueColor token">🔵</div></div>
+                        <div class="TokenContainer"><div class="blue blueColor token">🔵</div></div>
+                        <div class="TokenContainer"><div class="blue blueColor token">🔵</div></div>
+                        <div class="TokenContainer"><div class="blue blueColor token">🔵</div></div>
+                    </div>
+
+                </div>
+                <div class="BlueStepsContainer" style="--Clr: rgb(14, 14, 167);">
+                    <div data-id="8" class="steps"></div>
+                    <div data-id="9" class="steps start"></div>
+                    <div data-id="10" class="steps "></div>
+                    <div data-id="11" class="steps"></div>
+                    <div data-id="12" class="steps"></div>
+                    <div data-id="13" class="steps"></div>
+                    <div data-id="7" class="steps turn"></div>
+                    <div data-id="14" class="steps safe"></div>
+                    <div data-id="15" class="steps safe"></div>
+                    <div data-id="16" class="steps safe"></div>
+                    <div data-id="17" class="steps safe"></div>
+                    <div data-id="18" class="steps safe"></div>
+                    <div data-id="6" class="steps"></div>
+                    <div data-id="5" class="steps"></div>
+                    <div data-id="4" class="steps stop"></div>
+                    <div data-id="3" class="steps"></div>
+                    <div data-id="2" class="steps"></div>
+                    <div data-id="1" class="steps"></div>
+                </div>
+                <div class="YellowContainer yellow" style="--CLR: rgb(222, 222, 11,0.5);">
+                 <div class="TokenName">Tooba</div>
+                    <div class="InnerBox">
+                        <div class="TokenContainer"><div class="yellow YellowColor token">🟡</div></div>
+                        <div class="TokenContainer"><div class="yellow YellowColor token">🟡</div></div>
+                        <div class="TokenContainer"><div class="yellow YellowColor token">🟡</div></div>
+                        <div class="TokenContainer"><div class="yellow YellowColor token">🟡</div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="diceContainer ">
+
+                <div class="blueDiceContainer blueColor"></div>
+                <div class="YellowDiceContainer YellowColor"></div>
+
+            </div>
+        </div>
+     
+        <script src="/ludo.js"></script>
+</body>
+
+</html>

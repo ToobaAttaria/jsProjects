@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/game.css">
+</head>
+
+<body>
+    <div class="mainContainer">
+    <div class="nameContainer">
+        <div id="header">
+            <span>User Info</span>
+        </div>
+        <p> Enter User Name:
+            <input type="text" name="" id="userName" placeholder="Name">
+        </p>
+        <P id="AlertMsg">The field cannot be empty.</P>
+        <button id="submit">Submit</button>
+    </div>
+   
+    <div class="QuitGamecontainer">
+        <div id="QuitGameheader">
+            <span>Quit Game!</span>
+        </div>
+        <p>Are you sure you want to exit the game?
+        </p>
+        <button id="yes">Yes</button>
+        <button id="no">No</button>
+    </div>
+    <div class="Overlap"></div>
+    <div class="container">
+
+        <h1>
+            Rock Paper Scissor Game
+            <span><img src="/images/cancel.jpg" alt="" id="closebtn"></span>
+        </h1>
+        <div class="GameImgContainer">
+            <p id="name">Name </p>
+            <img src="/images/stone.jpg" alt="" id="DisplayuserImage">
+            <img src="/images/stone.jpg" alt="" id="DisplaycompImage">
+            <p>Comp</p>
+        </div>
+        <div class="imagesContainer">
+            <button class="btn">
+                <img src="/images/paper.jpg" alt="" id="paper">
+            </button>
+            <button class="btn">
+                <img src="/images/scissor.jpg" alt="" id="Scissor">
+            </button>
+            <button class="btn">
+                <img src="/images/stone.jpg" alt="" id="Stone">
+            </button>
+        </div>
+        <div class="scroresContainer">
+            <span id="YourScore">0</span>
+            <span id="Status">Status</span>
+            <span id="CompScore">0</span>
+        </div>
+
+    </div>
+    </div>
+
+    <script src="/game.js"></script>
+    
+</body>
+
+</html>

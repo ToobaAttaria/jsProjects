@@ -1,0 +1,139 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.mainContainer {
+   
+    background-image: url('./waoimg.avif');
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+}
+
+.blur {
+    background-color: rgba(0, 0, 0, 0.877);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.calculator {
+    max-width: 250px;
+    min-width: 250px;
+    background-color: black;
+    box-shadow: 0px 0px 10px 5px #1f1e1e;
+    padding: 25px 15px;
+    border-radius: 20px;
+    position: absolute;
+    left: 7%;
+
+}
+
+.display {
+    text-align: right;
+    background-color: black;
+    color: white;
+}
+
+.display input {
+    background-color: black;
+    border: none;
+    text-align: right;
+    width: 100%;
+    outline: none;
+    color: white;
+    padding-bottom: 20px;
+
+
+}
+
+.display .previous-operand {
+    height: 50px;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.display .current-operand {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    place-items: center;
+    gap: 5px;
+
+
+}
+
+
+
+button {
+    background-color: #313133;
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    aspect-ratio: 1/1;
+    border: none;
+    font-size: 20px;
+
+
+
+}
+
+button:hover {
+    background-color: #444446;
+
+}
+
+button:active {
+    background-color: #282829;
+
+}
+
+.zero {
+    grid-column: span 2;
+    width: 110px;
+    height: 50px;
+    border-radius: 50px;
+
+
+}
+
+button:nth-child(4n),
+.equals {
+    background-color: #dd810a;
+    color: white;
+}
+
+button:nth-child(4n):hover,
+.equals :hover {
+    background-color: #d38d31;
+    color: white;
+}
+
+button:nth-child(4n):active,
+.equals:active {
+    background-color: #ac670d;
+    color: white;
+}
+
+button:nth-child(-n+3) {
+    background-color: #616164;
+}
+
+button:nth-child(-n+3):hover {
+    background-color: #7f7f83;
+}
+
+button:nth-child(-n+3):active {
+    background-color: #434344;
+}
