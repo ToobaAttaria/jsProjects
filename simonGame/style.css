@@ -184,7 +184,7 @@
 
 }
 .checked {
-    background: url('/images/check.jpg') no-repeat center center;
+    background: url('./images/check.jpg') no-repeat center center;
     background-size: contain;
    
 }
